@@ -1,13 +1,13 @@
-﻿function handleForm(event) { event.preventDefault(); } 
+﻿
+function handleForm(event) { event.preventDefault(); } 
+//var submit = document.getElementById("calcGrade");
 
-var submit = document.getElementById("calcGrade");
-
-submit.addEventListener("click", function () {
-    iAssign = document.getElementById("Assignments").value
-    igp = document.getElementById("Gp").value
-    iQuiz = document.getElementById("Quiz").value
-    iExam = document.getElementById("Exam").value
-    iIntex = document.getElementById("INTEX").value
+$("#calcGrade").click( function calculate()  {
+    iAssign = $("#Assignments").val()
+    igp = $("#Gp").val()
+    iQuiz = $("#Quiz").val()
+    iExam = $("#Exam").val()
+    iIntex = $("#INTEX").val()
 
     //calc total % grade
     itotal = (iAssign * .5) + (igp * .1) + (iQuiz * .1) + (iExam * .2) + (iIntex * .1)
@@ -49,7 +49,7 @@ submit.addEventListener("click", function () {
     }
 
     //output
-    alert(itotal + " " + sGrade);
+    alert("Your final grade is " + itotal + "% which is a " + sGrade);
     document.getElementById("output").innerHTML = "Your final grade is " + itotal + "% which is a " + sGrade;
 });
 

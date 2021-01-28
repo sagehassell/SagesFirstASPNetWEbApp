@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link rel="icon" href="https://illustoon.com/photo/3833.png">
+</head>
+<body style="background-size: 100%; background-image: url('https://images.pexels.com/photos/60561/winter-snow-nature-60561.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') ">
+    <center>
+        <header>
+            <h1>@ViewBag.h1</h1>
+            <h2>
+               @ViewBag.h2
+            </h2>
+            <menu>
+                <p><a asp-controller="Home" asp-action="Index">Home</a></p>
+                <p><a asp-controller="Home" asp-action="CalcGrade">Grade Calculator</a></p>
+              
+            </menu>
+        </header>
+
+        @RenderBody()
+
+
+        <br>
+        <footer>Thanks for comming!</footer>
+
+    </center>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/JavaScript.js"></script>
+
+</body>
+</html>
+
