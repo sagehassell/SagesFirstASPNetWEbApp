@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    //put razor code here
+    ViewBag.Title = "Sage's Web Site :)";
+    ViewBag.h1 = "Sage Hassell";
+    ViewBag.h2 = " Welcome to the best website :)";
+}
+
+@model SagesFirstASPNetWEbApp.Models.CalcGradeModel
+
+
+<body>
+    <b><p>Enter the percentage of each grade in the following categories.</p></b>
+    <form asp-action="CalcGrade" method="post">
+        <label>Assignments: </label>
+        <input id="Assignments" asp-for="Assignments"  /><br /><br />
+        <label>Group Project: </label>
+        <input id="Gp" asp-for="Gp" /><br /><br />
+        <label>Quizzes: </label>
+        <input id="Quiz" asp-for="Quiz" /><br /><br />
+        <label>Exams: </label>
+        <input id="Exam" asp-for="Exam" /><br /><br />
+        <label>INTEX: </label>
+        <input id="INTEX" asp-for="INTEX" /><br /><br />
+        <input class="mybutton" type="submit" id="calcGrade" value="Calculate Grade" />   
+        <div asp-validation-summary="All"></div>
+    </form>
+    
+    <p id="output"></p>
+    
+</body>
